@@ -1,0 +1,57 @@
+git remote add origin "url" //Adding a folder with repository.....
+
+git remote -v //Tells us that how many repositories are attached with it.
+
+git push origin master //Pushing the work on Github....
+
+git branch shoaib //Crearting a new branch instead of commiting on main
+
+git checkout shoaib //Checking out that bracnch....NOw we can commit on it...
+
+//---------------PUll---------------------------------------
+
+git clone "forked url"
+
+git remote add upstream "original url from we have forked"
+
+git branch shoaib //Creating a new branch coz we dont have to commit on main branch
+
+git checkout shoaib //Switching to the shoaib branch...
+
+//Now if we have to push commits then we have to give the name of the branch below....
+
+git push origin "new branch name"
+
+//--------Removing a commit---------------
+
+-> The commit we have to remove so, we have to copy its the hashcode below it and then give the below command 
+
+git reset "hashcode"
+git stash 
+git push origin "branch name" -f //forcefully pushing it.....
+
+//------Pull request-------------------------------------
+
+//Now we have done changes in the "upstream main branch" but if as we earlier mentioned that 
+we have done this using creating different branches....so in our main branch there are not the 
+same commits that we have so we are going to do this that "our forked main" and the 
+"upstream forked main" should have same commits  
+
+git checkout main
+
+git fetch --all --prune 
+
+git reset --hard upstream/main 
+
+git push origin main 
+
+
+
+
+
+
+
+
+
+
+
